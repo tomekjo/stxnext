@@ -1,0 +1,28 @@
+{% load bootstrap3 %}
+{% bootstrap_css %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+<body>
+<hr>
+<h1><a href="/start">Library Application</a></h1>
+<h2>List of movies</h2>
+<div class="panel panel-default">
+
+    <div class="panel-heading">Movies count: {{movies|length}}</div>
+    <h4><a href="/movie/add">Add movie</a></h4>
+    <div class="panel-body"</div>
+        <ul>
+            {% for movie in movies %}
+            <li><a href="../../movie/detail/{{movie.id}}">{{movie.title|upper}}</a></li>
+            {% endfor %}
+        </ul>
+
+</div>
+
+
+</body>
+</html>

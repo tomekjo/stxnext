@@ -1,0 +1,26 @@
+{% load bootstrap3 %}
+{% bootstrap_css %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+<body>
+<hr>
+<h1><a href="/start">Small Library Application</a></h1>
+<h2>List of genres</h2>
+<div class="panel panel-default">
+
+    <div class="panel-heading">Genres count: {{genres|length}}</div>
+    <h4><a href="/genre/add">Add genre</a></h4>
+    <div class="panel-body"</div>
+        <ul>
+            {% for genre in genres %}
+            <li><a href="../../genre/detail/{{genre.id}}">{{genre.name|upper}}</a></li>
+            {% endfor %}
+        </ul>
+
+</div>
+
+</body>
+</html>

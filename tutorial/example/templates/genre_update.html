@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+<body>
+<hr>
+<h1>Small Library Application</h1>
+<h2>Update genre:</h2>
+<hr>
+{% block content %}
+<form method="post">
+    <div class="form-group">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Update">
+    </div>
+</form>
+  {% endblock %}
+</body>
+</html>
